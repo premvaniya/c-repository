@@ -1,0 +1,462 @@
+//write a program to print sum of two numbers...
+#include <stdio.h>
+int main() {    
+
+    int number1, number2, sum;
+    
+    printf("Enter two integers: ");
+    scanf("%d %d", &number1, &number2);
+
+    // calculating sum
+    sum = number1 + number2;      
+    
+    printf("%d + %d = %d", number1, number2, sum);
+    return 0;
+}
+
+
+#include <stdio.h>
+int main() {
+  int r, c, a[100][100], b[100][100], sum[100][100], i, j;
+  printf("Enter the number of rows (between 1 and 100): ");
+  scanf("%d", &r);
+  printf("Enter the number of columns (between 1 and 100): ");
+  scanf("%d", &c);
+
+  printf("\nEnter elements of 1st matrix:\n");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf("Enter element a%d%d: ", i + 1, j + 1);
+      scanf("%d", &a[i][j]);
+    }
+
+  printf("Enter elements of 2nd matrix:\n");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf("Enter element b%d%d: ", i + 1, j + 1);
+      scanf("%d", &b[i][j]);
+    }
+
+  // adding two matrices
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      sum[i][j] = a[i][j] + b[i][j];
+    }
+
+  // printing the result
+  printf("\nSum of two matrices: \n");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf("%d   ", sum[i][j]);
+      if (j == c - 1) {
+        printf("\n\n");
+      }
+    }
+
+  return 0;
+}
+
+//write a program to print sum of digit of given numbers
+// Write a Program to Find Sum of Digits of a given number
+#include<stdio.h>
+
+int main ()
+{
+    int num, sum = 0;
+ 
+    
+    printf("The number is=	");
+    scanf("%d",&num);
+
+    //loop to find sum of digits
+    while(num!=0){
+        sum += num % 10;
+        num = num / 10;
+    }
+ 
+    //output
+    printf("Sum: %d\n",sum);
+ 
+    return 0;
+
+}
+
+
+//writ a program to sum of odd nubers between 1 to n
+#include <stdio.h>
+
+int main()
+{
+    int i, n, sum=0;
+
+    
+    printf("Enter upper limit: ");
+    scanf("%d", &n);
+
+
+    for(i=1; i<=n; i+=2)
+    {
+        sum += i;
+    }
+
+    printf("Sum of odd numbers = %d", sum);
+
+    return 0;
+}
+
+//sum and average of N numbers
+#include <stdio.h>
+
+int main()
+{
+  int i, n, Sum = 0, numbers;
+  float Average;
+
+  printf("\nHow many numbers u wanna sum: \n");
+  scanf("%d", &n);
+
+  printf("\nEnter numbers one by one\n");
+  for(i = 0; i < n; ++i)
+   {
+     scanf("%d", &numbers);
+     Sum = Sum + numbers;
+   }
+
+  Average = Sum / n;
+
+  printf("\nSum of the %d Numbers = %d", n, Sum);
+  printf("\nAverage of the %d Numbers = %.2f", n, Average);
+
+  return 0;
+}
+
+#include<stdio.h>
+#include<conio.h>
+struct stud1
+{
+	int rollno;
+	char name;
+	float per;
+};
+void main()
+{
+	struct stud1 s1= {102,"prem",97.00};
+	printf("\n rollno=%d",s1.rollno);
+	printf("\n name=%s",s1.name);
+	printf("\n persentage=%f",s1.per);
+	getch();
+	
+}
+
+
+
+#include<stdio.h>
+#include<conio.h>
+struct emp1
+clrscr();
+{
+	char name[10];
+	int no, salary;
+}e1;
+int main()
+{
+	printf("\n no:	");
+	scanf("%d",&e1.no);
+	
+		printf("\n salary:	");
+	scanf("%d",&e1.salary);
+
+	printf("\n name:	");
+	scanf("%s",&e1.name);
+	
+	printf("\n employee no=%d",e1.no);
+	printf("\n employee salary=%d",e1.salary);
+	printf("\n employee name=%s",e1.name);
+	getch();
+	return 0;
+}
+
+
+
+//write a program for string lenth
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+int main()
+{
+	char str1[12]="hello";
+	char str2[12]="world";
+	char str3[12];
+	
+	int len;
+	strcpy(str1,str1);
+	printf("%s",str3);
+	
+
+
+	strcat(str1,str2);
+	printf("%s",str1);
+	len=strlen(str1);
+	printf("%d",len);
+	return 0;
+	
+}
+
+
+//strcmp
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char s1[]="apple";
+    char s2[]="banana";
+    if(strcmp(s1,s2)==0)
+        printf("equal");
+    if (strcmp(s1,s2)<0)
+        printf("s1 less than s2");
+    if(strcmp(s1,s2)>0    )
+        printf("s1 greater than s2");
+ 
+    return 0;
+}
+
+
+
+//strcat
+#include <stdio.h>
+#include <string.h>
+
+int main () {
+   char src[50], dest[50];
+
+   strcpy(src,  "This is source");
+   strcpy(dest, "This is destination");
+
+   strcat(dest, src);
+
+   printf("Final destination string : |%s|", dest);
+   
+   return(0);
+}
+
+
+#include<stdio.h>
+
+#include<string.h>
+
+int main(void)
+
+{
+
+char mystrg[60];
+
+int leng, g;
+
+// Printing the program name and what the program will do
+
+printf("Program in C for reversing a given string \n ");
+
+printf("Please insert the string you want to reverse: ");
+
+    // fetch the input string from the user
+
+scanf( "%s", mystrg );
+
+// This will find the length of your string with the help of strlen() function of string.h header file
+
+leng = strlen(mystrg);
+
+// iterate through each and every character of the string for printing it backwards or reverse direction
+
+for(g = leng - 1; g >= 0; g--) {
+
+     printf("%c", mystrg[g]);
+
+}
+
+return 0;
+
+}
+
+
+
+
+//str length
+
+// C program to find the length of string
+#include <stdio.h>
+#include <string.h>
+ 
+int main()
+{
+    char Str[1000];
+    int i;
+ 
+    printf("Enter the String: ");
+    scanf("%s", Str);
+ 
+    for (i = 0; Str[i] != '\0'; ++i);
+ 
+    printf("Length of Str is %d", i);
+ 
+    return 0;
+}
+
+
+//interest calculation table
+#include<stdio.h>
+ 
+int main() 
+{
+   float PAmount, ROI, Time_Period, si;
+ 
+   printf("\nPlease enter the Principal Amount : \n");
+   scanf("%f", &PAmount);
+ 
+   printf("Please Enter Rate Of Interest : \n");
+   scanf("%f", &ROI);
+ 
+   printf("Please Enter the Time Period in Years : \n");
+   scanf("%f", &Time_Period);
+ 
+   si = (PAmount * ROI * Time_Period) / 100;
+   printf("\nSimple Interest for Principal Amount %.2f is = %.2f", PAmount, si);
+ 
+   return 0;
+}
+
+//return 1 if prime otherwise 0
+#include<stdio.h>
+int main()
+{
+   int i,num,p=0;
+   printf("Please enter a number: \n");
+   scanf("%d", &num);
+   for(i=1; i<=num; i++)
+   {
+      if(num % i == 0)
+      {
+         p++;
+      }
+   }
+   if(p==2)
+   {
+      printf("Entered number is %d\n"
+      "and it is a prime number.", num);
+   }
+   else
+   {
+      printf("Entered number is %d\n"
+      "and it is not a prime number.",num);
+   }
+}
+
+
+
+#include<stdio.h>
+#include<conio.h>
+struct prem
+{
+	int age;
+	char nature[10];
+	float height;
+};
+void main(){
+
+struct prem p1={18,"emotional",5.00
+};
+printf("\n age=%d",p1.age);
+printf("\n nature=%s",p1.nature);
+printf("\n height=%f",p1.height);
+getch();
+}
+
+
+
+
+//write a program that defines a function to add first n numbers
+
+#include<stdio.h>
+#include<conio.h>
+
+//Declaration of addN() funtion
+int addN(int x);
+int main()
+{
+int x;
+
+printf("\nEnter a number:");
+scanf("%d",&x);
+
+//calling addN() function
+printf("\nSum of first %d Numbers = %d",x,addN(x));
+getch();
+}
+
+//Definition o addN() function
+int addN(int n)
+{
+int i,sum=0;
+for(i=1;i<=n;i++)
+sum+=i;
+return sum;
+}
+
+//arithmatic computer
+#include <stdio.h>
+double main() {    
+
+    int number1, number2, sum,sum1,sum2,sum3;
+    
+    printf("Enter two integers: ");
+    scanf("%lf %lf", &number1, &number2);
+
+    // calculating sum
+    sum = number1 - number2; 
+    sum1 = number1 + number2;
+    sum2 = number1 * number2;
+    sum3 = number1 / number2;
+    
+    printf("%lf - %lf = %lf\n", number1, number2, sum);
+    printf("%lf + %lf = %lf\n", number1, number2, sum1);
+    printf("%lf * %lf = %lf\n", number1, number2, sum2);
+    printf("%lf / %lf = %lfL\n", number1, number2, sum3);
+    return 0;
+}
+
+
+#include <stdio.h>
+int main()
+{
+    int i,j;
+    char ch='A';
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("%c ",ch++);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main(void) {
+  int rollno[20], marks[20], i;
+
+  for (i = 0; i < 20; i++) {
+    printf("\n Enter Roll of Student [%d]", i + 1);
+    scanf("%d", & rollno[i]);
+    printf("\n Enter Mark of Student [%d]", i + 1);
+    scanf("%d", & marks[i]);
+  }
+
+  for (i = 0; i < 20; i++) {
+    printf("\n Roll No :  %d   Marks : %d", rollno[i], marks[i]);
+  }
+
+  return 0;
+}
